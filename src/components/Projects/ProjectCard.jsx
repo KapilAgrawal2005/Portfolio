@@ -1,5 +1,5 @@
 import React from "react";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
 
 const ProjectCard = ({ project, index }) => {
   const isEven = index % 2 === 0;
@@ -60,6 +60,9 @@ const ProjectCard = ({ project, index }) => {
             </li>
           ))}
         </ul>
+        <a href={project.gitlink}>
+          <Github className="mt-4 ml-4 cursor-pointer transition-transform duration-300 ease-in-out hover:text-[#187EA7] scale-125" />
+        </a>
       </div>
     </div>
   );
