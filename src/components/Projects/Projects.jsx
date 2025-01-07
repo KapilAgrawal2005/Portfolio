@@ -30,7 +30,7 @@ const Projects = () => {
       description:
         "This is my personal portfolio website, where I showcase my projects, skills, and experiences. It's designed to provide an overview of my work and help visitors learn more about me. The site is built using React.js, Tailwind CSS, and deployed on Vercel.",
       image: portfolio,
-      link: "#",
+      link: "https://kapil-agrawal.vercel.app/",
       color: "#ffe578",
       tags: [
         "#react.js",
