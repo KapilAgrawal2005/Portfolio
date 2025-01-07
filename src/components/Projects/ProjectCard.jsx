@@ -60,7 +60,7 @@ const ProjectCard = ({ project, index }) => {
             </li>
           ))}
         </ul>
-        <a href={project.gitlink}>
+        <a href={project.gitlink} target="blank">
           <Github className="mt-4 ml-4 cursor-pointer transition-transform duration-300 ease-in-out hover:text-[#187EA7] scale-125" />
         </a>
       </div>
