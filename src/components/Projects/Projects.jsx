@@ -41,7 +41,7 @@ const Projects = () => {
         "#javascript",
         "#figma",
       ],
-      gitlink: "https://github.com/KapilAgrawal2005/UAS-NMIMS",
+      gitlink: "https://github.com/KapilAgrawal2005/Portfolio",
     },
   ];
 
