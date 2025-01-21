@@ -5,10 +5,11 @@ import Footer from "./components/Footer";
 import ToolsAndTechnologies from "./components/ToolsTechnology/ToolsAndTechnologies";
 import Home from "./components/Home";
 import ProjectPage from "./components/ProjectPage";
-import FloatingBackground from "./components/About/FloatingBackground";
+import FloatingBackground from "./components/FloatingBackground";
 import AboutMe from "./components/About/AboutMe";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ScrollToTop from "./ScrollToTop";
 
 const router = createBrowserRouter([
   { path: "/", element: <Home /> },
@@ -22,6 +23,7 @@ const App = () => {
     <div className="w-full min-h-screen bg-[#111] text-white font-['Nunito'] overflow-hidden">
       <FloatingBackground />
       <Header />
+      <ScrollToTop />
       <RouterProvider router={router} />
       <Footer />
     </div>

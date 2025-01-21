@@ -50,11 +50,11 @@ const Header = () => {
           }
           tooltip="Tools and Technologies"
         />
-        <IconWithTooltip
+        {/* <IconWithTooltip
           icon={<Phone />}
           tooltip="Phone"
           href="tel:7340194848"
-        />
+        /> */}
         <IconWithTooltip
           icon={<FaWhatsapp className="text-2xl" />}
           tooltip="WhatsApp"
