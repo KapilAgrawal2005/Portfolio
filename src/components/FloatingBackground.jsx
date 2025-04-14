@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const FloatingBackground = () => {
-  const shapes = Array(10).fill(null);
+  const shapes = Array(5).fill(null);
 
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none">

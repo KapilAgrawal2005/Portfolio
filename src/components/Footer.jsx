@@ -12,7 +12,6 @@ import {
 const Footer = () => {
   return (
     <footer className="flex flex-col items-center justify-end pb-10 ">
-      <p className="text-xs text-gray-300">Kapil Agrawal © 2024</p>
       <div className="black-logo my-4">
         <img src={logo} className="h-[80px]" />
       </div>
@@ -23,7 +22,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Linkedin className="w-5 hover:text-white" />
+            <Linkedin className="w-5 hover:text-white hover:scale-150 transition-transform duration-300" />
           </a>
         </li>
         <li>
@@ -32,7 +31,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Instagram className="w-5 hover:text-white" />
+            <Instagram className="w-5 hover:text-white hover:scale-150 transition-transform duration-300" />
           </a>
         </li>
         <li>
@@ -41,7 +40,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Mail className="w-5 hover:text-white" />
+            <Mail className="w-5 hover:text-white hover:scale-150 transition-transform duration-300" />
           </a>
         </li>
         <li>
@@ -50,10 +49,13 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Github className="w-5 hover:text-white" />
+            <Github className="w-5 hover:text-white hover:scale-150 transition-transform duration-300" />
           </a>
         </li>
       </ul>
+      <p className="text-gray-300 py-4">
+        Copyright © 2024 || Kapil Agrawal All Right Reserved.
+      </p>
     </footer>
   );
 };

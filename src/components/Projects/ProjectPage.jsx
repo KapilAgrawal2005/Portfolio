@@ -1,6 +1,6 @@
 import React from "react";
-import ProjectsButton from "./Projects/ProjectsButton";
-import Projects from "./Projects/Projects";
+import ProjectsButton from "./ProjectsButton";
+import Projects from "./Projects";
 
 const ProjectPage = () => {
   return (

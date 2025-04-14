@@ -4,7 +4,7 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer";
 import ToolsAndTechnologies from "./components/ToolsTechnology/ToolsAndTechnologies";
 import Home from "./components/Home";
-import ProjectPage from "./components/ProjectPage";
+import ProjectPage from "./components/Projects/ProjectPage";
 import FloatingBackground from "./components/FloatingBackground";
 import AboutMe from "./components/About/AboutMe";
 
