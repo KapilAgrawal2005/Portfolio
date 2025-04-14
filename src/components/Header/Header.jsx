@@ -25,9 +25,9 @@ const Header = () => {
   };
 
   return (
-    <header className="z-10 flex items-center justify-between w-full px-10 max-w-screen-xl mx-auto pt-3 pb-3 gap-20">
+    <header className="z-10 flex items-center justify-between w-full px-4 lg:px-10 max-w-screen-xl mx-auto pt-3 pb-3 gap-10 md:gap-12 lg:gap-20">
       <a href="/" className="flex items-center">
-        <p className="text-3xl text-[#36bdf3] font-bold hover:text-[#69d4ff]">
+        <p className="text-2xl md:text-3xl text-[#36bdf3] font-bold hover:text-[#69d4ff]">
           Kapil Agrawal
         </p>
         {/* <img src={logo} width={80} height={80} />  */}
