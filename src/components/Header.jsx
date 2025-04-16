@@ -1,5 +1,4 @@
 "use client";
-import logo from "../../assets/images/logo.png";
 import { useState } from "react";
 import { Menu } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
@@ -30,7 +29,6 @@ const Header = () => {
         <p className="text-2xl md:text-3xl text-[#36bdf3] font-bold hover:text-[#69d4ff]">
           Kapil Agrawal
         </p>
-        {/* <img src={logo} width={80} height={80} />  */}
       </a>
 
       <nav className="hidden md:flex gap-10 items-center pt-3">

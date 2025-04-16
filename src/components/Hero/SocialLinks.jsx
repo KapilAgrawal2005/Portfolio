@@ -12,7 +12,7 @@ const SocialLinks = () => {
             rel="noopener noreferrer"
             className="hover:text-white transition-colors duration-300"
           >
-            <Linkedin className="w-6 h-6" />
+            <Linkedin className="w-6 h-6 hover:scale-150 transition-transform duration-300" />
           </a>
         </li>
         <li>
@@ -22,7 +22,7 @@ const SocialLinks = () => {
             rel="noopener noreferrer"
             className="hover:text-white transition-colors duration-300"
           >
-            <Github className="w-6 h-6" />
+            <Github className="w-6 h-6 hover:scale-150 transition-transform duration-300" />
           </a>
         </li>
         <li>
@@ -32,7 +32,7 @@ const SocialLinks = () => {
             rel="noopener noreferrer"
             className="hover:text-white transition-colors duration-300"
           >
-            <Instagram className="w-6 h-6" />
+            <Instagram className="w-6 h-6 hover:scale-150 transition-transform duration-300" />
           </a>
         </li>
         <li>
@@ -42,7 +42,7 @@ const SocialLinks = () => {
             rel="noopener noreferrer"
             className="hover:text-white transition-colors duration-300"
           >
-            <Mail className="w-6 h-6" />
+            <Mail className="w-6 h-6 hover:scale-150 transition-transform duration-300" />
           </a>
         </li>
       </ul>

@@ -62,7 +62,7 @@ const HeroSection = () => {
   return (
     <div className="relative w-full h-auto flex items-center justify-center p-4 md:p-7">
       <motion.div
-        className="relative flex flex-col items-center w-full max-w-4xl"
+        className="relative flex md:flex-col items-center w-full max-w-4xl"
         variants={containerVariants}
         initial="collapsed"
         animate={controls}
@@ -103,48 +103,6 @@ const HeroSection = () => {
                   className="rounded-full"
                 />
               </div>
-            </motion.div>
-          </div>
-        </motion.div>
-
-        <motion.div
-          className="w-full max-w-md overflow-hidden"
-          variants={infoVariants}
-          transition={{ duration: 0.5, ease: "easeInOut" }}
-        >
-          <div className="w-full rounded-2xl p-6 bg-[#001219]">
-            <motion.h2
-              className="text-2xl md:text-3xl font-bold text-white mb-4 text-center"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: isExpanded ? 1 : 0, y: isExpanded ? 0 : 20 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              Kapil Agrawal
-            </motion.h2>
-
-            <AnimatedTitle isVisible={isExpanded} />
-
-            <motion.p
-              className="text-base md:text-lg text-gray-200 mb-6 text-center"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: isExpanded ? 1 : 0, y: isExpanded ? 0 : 20 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-            >
-              A passionate developer crafting beautiful web experiences with
-              modern technologies.
-            </motion.p>
-            <motion.div
-              className="flex justify-center"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: isExpanded ? 1 : 0, y: isExpanded ? 0 : 20 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-            >
-              <a
-                href="#resume"
-                className="inline-block px-6 py-3 bg-gradient-to-r from-cyan-400 to-purple-600 text-white rounded-full hover:opacity-90 transition duration-300"
-              >
-                My Resume
-              </a>
             </motion.div>
           </div>
         </motion.div>
