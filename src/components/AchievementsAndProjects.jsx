@@ -3,7 +3,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import GDSC from "../assets/images/GDSC.jpg";
 import IBM from "../assets/images/IBM.png";
 import Java from "../assets/images/Java.png";
-import HireWay from "../assets/images/HireWay.png";
+import HireWay from "../assets/images/Hireway.png";
 import Portfolio from "../assets/images/Portfolio.png";
 import UAS from "../assets/images/UAS.png";
 const AchievementCard = ({ title, description, imageUrl }) => (

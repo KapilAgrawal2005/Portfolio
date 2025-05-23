@@ -1,7 +1,7 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
 import uas from "../assets/images/UAS.png";
-import hireway from "../assets/images/HireWay.png";
+import hireway from "../assets/images/Hireway.png";
 import portfolio from "../assets/images/Portfolio.png";
 
 const Projects = () => {
