@@ -1,61 +1,76 @@
 import React from "react";
-import logo from "../assets/images/logo.png";
-import {
-  Linkedin,
-  Twitter,
-  Instagram,
-  Mail,
-  Youtube,
-  Github,
-} from "lucide-react";
-
+import { Linkedin, Instagram, Mail } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
 const Footer = () => {
+  const handleScroll = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <footer className="flex flex-col items-center justify-end pb-10 ">
-      <div className="black-logo my-4">
-        <img src={logo} className="h-[80px]" />
+    <footer className="text-white py-8 px-[12vw] md:px-[7vw] lg:px-[20vw]">
+      <div className="container mx-auto text-center">
+        {/* Name / Logo */}
+        <h2 className="text-xl font-semibold text-purple-500">Kapil Agrawal</h2>
+
+        {/* Navigation Links - Responsive */}
+        <nav className="flex flex-wrap justify-center space-x-4 sm:space-x-6 mt-4">
+          {[
+            { name: "About", id: "about" },
+            { name: "Skills", id: "skills" },
+            { name: "Experience", id: "experience" },
+            { name: "Projects", id: "projects" },
+            { name: "Education", id: "education" },
+          ].map((item, index) => (
+            <button
+              key={index}
+              onClick={() => handleScroll(item.id)}
+              className="hover:text-purple-500 text-sm sm:text-base my-1"
+            >
+              {item.name}
+            </button>
+          ))}
+        </nav>
+
+        {/* Social Media Icons - Responsive */}
+        <div className="flex flex-wrap justify-center space-x-8 mt-6">
+          {[
+            {
+              icon: <Linkedin />,
+              link: "https://www.linkedin.com/in/kapil-agrawal-93069a284/",
+            },
+            {
+              icon: <Instagram />,
+              link: "https://www.instagram.com/ig_kapil_agrawal/",
+            },
+            {
+              icon: <Mail />,
+              link: "mailto:kapilagrawal448@gmail.com",
+            },
+            {
+              icon: <FaGithub />,
+              link: "https://github.com/KapilAgrawal2005",
+            },
+          ].map((item, index) => (
+            <a
+              key={index}
+              href={item.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="h-6 w-6 text-xl hover:text-purple-500 transition-all hover:scale-150 duration-300"
+            >
+              {item.icon}
+            </a>
+          ))}
+        </div>
+
+        {/* Copyright Text */}
+        <p className="text-sm text-gray-400 mt-6">
+          © 2025 Kapil Agrawal. All rights are reserved.
+        </p>
       </div>
-      <ul className="mx-auto flex items-center justify-center gap-6 text-[#b0b2c3]">
-        <li>
-          <a
-            href="https://www.linkedin.com/in/kapil-agrawal-93069a284/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Linkedin className="w-5 hover:text-white hover:scale-150 transition-transform duration-300" />
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.instagram.com/ig_kapil_agrawal/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Instagram className="w-5 hover:text-white hover:scale-150 transition-transform duration-300" />
-          </a>
-        </li>
-        <li>
-          <a
-            href="mailto:kapilagrawal448@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Mail className="w-5 hover:text-white hover:scale-150 transition-transform duration-300" />
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://github.com/KapilAgrawal2005"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Github className="w-5 hover:text-white hover:scale-150 transition-transform duration-300" />
-          </a>
-        </li>
-      </ul>
-      <p className="text-gray-300 py-4">
-        Copyright © 2024 || Kapil Agrawal All Right Reserved.
-      </p>
     </footer>
   );
 };

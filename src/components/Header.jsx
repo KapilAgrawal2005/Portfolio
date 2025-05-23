@@ -1,103 +1,116 @@
-"use client";
-import { useState } from "react";
-import { Menu } from "lucide-react";
-import { FaWhatsapp } from "react-icons/fa";
+import  { useState, useEffect } from "react";
+import { FiMenu, FiX } from "react-icons/fi";
 
-const navigationText = [
-  { link: "/", text: "Home" },
-  { link: "/aboutme", text: "About Me" },
-  { link: "/projects", text: "Projects" },
-  { link: "/tools", text: "Tools and Technologies" },
-  {
-    link: "https://wa.me/7340194848?text=Hi, How are you?",
-    text: "WhatsApp",
-    icon: <FaWhatsapp className="text-xl" />,
-    external: true,
-  },
-];
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
-const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  // Detect scroll and change navbar background
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Handle menu toggle and scroll lock
+  const toggleMenu = (shouldOpen) => {
+    setIsOpen(shouldOpen);
+    if (shouldOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
   };
 
+  const menuItems = [
+    { label: "Home", link: "/" },
+    { label: "About", link: "/aboutme" },
+    { label: "Tools and Technologies", link: "tools" },
+    // { label: "Experience", link: "/" },
+    { label: "Projects", link: "/projects" },
+    // { label: "Achievements", link: "/achievements" },
+  ];
+
   return (
-    <header className="z-10 flex items-center justify-between w-full px-4 lg:px-10 max-w-screen-xl mx-auto pt-3 pb-3 gap-10 md:gap-12 lg:gap-20">
-      <a href="/" className="flex items-center">
-        <p className="text-2xl md:text-3xl text-[#36bdf3] font-bold hover:text-[#69d4ff]">
-          Kapil Agrawal
-        </p>
-      </a>
-
-      <nav className="hidden md:flex gap-10 items-center pt-3">
-        {navigationText.map((item, index) => (
-          <a
-            key={index}
-            href={item.link}
-            target={item.external ? "_blank" : "_self"}
-            rel={item.external ? "noopener noreferrer" : ""}
-            className={`hover:text-[#187EA7] transition-colors text-2xl ${
-              item.icon ? "flex items-center gap-1" : ""
-            }`}
-          >
-            {item.icon}
-            {item.text}
-          </a>
-        ))}
-      </nav>
-
-      <button
-        className="md:hidden hover:text-[#187EA7]"
-        onClick={toggleMenu}
-        aria-label="Toggle menu"
-      >
-        <Menu size={24} />
-      </button>
-
-      <div
-        className={`fixed top-0 right-0 h-full w-64 bg-[#111111]/70 backdrop-blur-md shadow-lg transform transition-transform duration-300 ease-in-out z-50 ${
-          isMenuOpen ? "translate-x-0" : "translate-x-full"
+    <>
+      <nav
+        className={`fixed top-0 w-full h-16 z-50 transition duration-300 px-[4vw] md:px-[6vw] lg:px-[10vw] ${
+          isScrolled
+            ? "bg-[#050414] bg-opacity-50 backdrop-blur-lg shadow-md"
+            : "bg-transparent"
         }`}
       >
-        <div className="flex flex-col p-5">
-          <button
-            className="self-end mb-5 h-10 w-10 text-[#fff] hover:text-[#000] p-2 bg-[#187EA7] rounded-full shadow-md hover:bg-gray-100 transition-colors duration-300"
-            onClick={toggleMenu}
-            aria-label="Close menu"
-          >
-            ✕
-          </button>
+        <div className="w-full text-white py-4 flex justify-between items-center">
+          {/* Logo */}
+          <div className="text-lg font-semibold cursor-pointer">
+            <a href="/">
+              <span className="text-[#8245ec]">&lt;</span>
+              <span className="text-white">Kapil</span>
+              <span className="text-[#8245ec]">/</span>
+              <span className="text-white">Agrawal</span>
+              <span className="text-[#8245ec]">&gt;</span>
+            </a>
+          </div>
 
-          <div className="flex flex-col gap-4">
-            {navigationText.map((item, index) => (
-              <a
-                key={index}
-                href={item.link}
-                target={item.external ? "_blank" : "_self"}
-                rel={item.external ? "noopener noreferrer" : ""}
-                className={`hover:text-[#187EA7] transition-colors py-2 ${
-                  item.icon ? "flex items-center gap-2" : ""
-                }`}
-                onClick={toggleMenu}
+          {/* Desktop Menu */}
+          <ul className="hidden md:flex space-x-8 text-gray-300">
+            {menuItems.map((item) => (
+              <li
+                key={item.label}
+                className="cursor-pointer hover:text-[#8245ec]"
               >
-                {item.icon}
-                {item.text}
-              </a>
+                <a href={item.link}>{item.label}</a>
+              </li>
             ))}
+          </ul>
+
+          {/* Mobile Menu Icon */}
+          <div className="md:hidden">
+            {isOpen ? (
+              <FiX
+                className="text-3xl text-[#8245ec] cursor-pointer"
+                onClick={() => toggleMenu(false)}
+              />
+            ) : (
+              <FiMenu
+                className="text-3xl text-[#8245ec] cursor-pointer"
+                onClick={() => toggleMenu(true)}
+              />
+            )}
           </div>
         </div>
-      </div>
+      </nav>
 
-      {isMenuOpen && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-40 md:hidden"
-          onClick={toggleMenu}
-        />
+      {/* Mobile Menu Items */}
+      {isOpen && (
+        <>
+          {/* Backdrop */}
+          <div
+            className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40 md:hidden"
+            onClick={() => toggleMenu(false)}
+          />
+
+          {/* Menu Content */}
+          <div className="fixed left-1/2 top-20 transform -translate-x-1/2 w-4/5 bg-[#050414]/60 backdrop-blur-xl z-50 rounded-lg shadow-lg md:hidden border border-purple-500/20">
+            <ul className="flex flex-col items-center space-y-4 py-4 text-gray-300">
+              {menuItems.map((item) => (
+                <li
+                  key={item.label}
+                  className="cursor-pointer hover:text-[#8245ec] transition-colors duration-300 w-full text-center py-2"
+                  onClick={() => toggleMenu(false)}
+                >
+                  <a href={item.link}>{item.label}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </>
       )}
-    </header>
+    </>
   );
 };
 
-export default Header;
+export default Navbar;
