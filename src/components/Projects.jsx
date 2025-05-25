@@ -3,9 +3,38 @@ import ProjectCard from "./ProjectCard";
 import uas from "../assets/images/UAS.png";
 import hireway from "../assets/images/Hireway.png";
 import portfolio from "../assets/images/Portfolio.png";
+import lms from "../assets/images/lms.png";
 
 const Projects = () => {
   const projects = [
+    {
+      title: "LMS",
+      subtitle: "(A Library Management System)",
+      description:
+        " Developed a MERN Stack application with Admin and User roles, where Admins manage books/users and assign new Admins, while Users borrow/return books with fine calculations.",
+      image: lms,
+      // link: "https://hireway.vercel.app/",
+      color: "#459bd5",
+      tags: [
+        "#nodejs",
+        "#javascript",
+        "#vercel",
+        "#react",
+        "#tailwind",
+        "#api",
+        "#mongodb",
+        "#authentication",
+        "authorization",
+        "#database",
+        "#express",
+        "#restapi",
+        "#jwt",
+        "#bcryptjs",
+        "#nodemon",
+        "#cors",
+      ],
+      gitlink: "https://github.com/KapilAgrawal2005/Library-Management-System",
+    },
     {
       title: "HireWay",
       subtitle: "(A Job Portal)",
