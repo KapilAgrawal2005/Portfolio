@@ -3,6 +3,7 @@ import ReactTypingEffect from "react-typing-effect";
 import Tilt from "react-parallax-tilt";
 import kapil from "../assets/images/kapil.png";
 import SocialLinks from "./SocialLinks";
+
 const About = () => {
   return (
     <section
@@ -74,22 +75,35 @@ const About = () => {
         </div>
         {/* Right Side */}
         <div className="md:w-1/2 flex justify-center md:justify-end">
-          <Tilt
-            className="w-48 h-48 sm:w-64 sm:h-64 md:w-[22rem] md:h-[25rem] border-4 border-purple-700 rounded-full"
-            tiltMaxAngleX={20}
-            tiltMaxAngleY={20}
-            perspective={1000}
-            scale={1.05}
-            transitionSpeed={1000}
-            gyroscope={true}
-          >
+          {/* Regular div for mobile */}
+          <div className="lg:hidden w-48 h-48 sm:w-64 sm:h-64 md:w-[22rem] md:h-[25rem] border-4 border-purple-700 rounded-full">
             <img
               src={kapil}
               alt="Kapil Agrawal"
               className="w-full h-full rounded-full object-cover drop-shadow-[0_10px_20px_rgba(130,69,236,0.5)]"
             />
             <SocialLinks />
-          </Tilt>
+          </div>
+
+          {/* Tilt effect for laptop and above */}
+          <div className="hidden lg:block">
+            <Tilt
+              className="w-[22rem] h-[25rem] border-4 border-purple-700 rounded-full"
+              tiltMaxAngleX={20}
+              tiltMaxAngleY={20}
+              perspective={1000}
+              scale={1.05}
+              transitionSpeed={1000}
+              gyroscope={true}
+            >
+              <img
+                src={kapil}
+                alt="Kapil Agrawal"
+                className="w-full h-full rounded-full object-cover drop-shadow-[0_10px_20px_rgba(130,69,236,0.5)]"
+              />
+              <SocialLinks />
+            </Tilt>
+          </div>
         </div>
       </div>
     </section>
