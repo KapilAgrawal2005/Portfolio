@@ -82,7 +82,7 @@ const About = () => {
               alt="Kapil Agrawal"
               className="w-full h-full rounded-full object-cover drop-shadow-[0_10px_20px_rgba(130,69,236,0.5)]"
             />
-            <SocialLinks />
+            {/* <SocialLinks /> */}
           </div>
 
           {/* Tilt effect for laptop and above */}
