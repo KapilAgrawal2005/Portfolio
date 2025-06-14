@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import ProjectPage from "./pages/ProjectPage";
 import FloatingBackground from "./components/FloatingBackground";
 import AboutMe from "./pages/AboutMe";
+import Experience from "./pages/Experience";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ScrollToTop from "./ScrollToTop";
@@ -15,6 +16,7 @@ const router = createBrowserRouter([
   { path: "/tools", element: <ToolsAndTechnologies /> },
   { path: "/projects", element: <ProjectPage /> },
   { path: "/aboutme", element: <AboutMe /> },
+  { path: "/experience", element: <Experience /> },
   { path: "/achievements", element: <Achievements /> },
 ]);
 

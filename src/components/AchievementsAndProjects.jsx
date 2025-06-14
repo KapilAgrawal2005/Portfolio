@@ -131,17 +131,19 @@ const AchievementsAndProjects = () => {
               ))}
             </div>
             <div className="mt-8 text-center">
-              <button
-                className="px-6 py-3 text-white rounded-lg font-bold mt-12"
-                style={{
-                  background: "linear-gradient(90deg, #8245ec, #a855f7)",
-                  boxShadow:
-                    "0 0 2px #8245ec, 0 0 2px #8245ec, 0 0 40px #8245ec",
-                }}
-              >
-                View More Achievements
-                <FaArrowRightLong className="inline -block ml-2 font-bold" />
-              </button>
+              <a href="/achievements">
+                <button
+                  className="px-6 py-3 text-white rounded-lg font-bold mt-12"
+                  style={{
+                    background: "linear-gradient(90deg, #8245ec, #a855f7)",
+                    boxShadow:
+                      "0 0 2px #8245ec, 0 0 2px #8245ec, 0 0 40px #8245ec",
+                  }}
+                >
+                  View More Achievements
+                  <FaArrowRightLong className="inline -block ml-2 font-bold" />
+                </button>
+              </a>
             </div>
           </div>
 

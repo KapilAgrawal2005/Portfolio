@@ -1,46 +1,88 @@
 "use client";
-
+import { FaAward, FaLink } from "react-icons/fa";
+import GDSC from "../assets/images/GDSC.jpg";
+import IBM from "../assets/images/IBM.png";
+import Java from "../assets/images/Java.png";
+import node from "../assets/images/node.png";
+import react from "../assets/images/react.png";
+import arvr from "../assets/images/arvr.png";
+import ai from "../assets/images/ai.png";
 const achievements = [
   {
     id: 1,
-    title: "Web Development Bootcamp",
-    issuer: "Udemy",
+    title: "Google Developer Student Club",
+    issuer: "Google",
     date: "2023",
     description:
-      "Completed comprehensive web development course covering HTML, CSS, JavaScript, React, and Node.js",
-    image: "/certificates/web-dev-cert.jpg",
+      "Active member of GDSC, participating in workshops and collaborative projects to enhance technical skills and community engagement.",
+    image: GDSC,
   },
   {
     id: 2,
-    title: "Data Structures and Algorithms",
-    issuer: "Coursera",
+    title: "IBM Data Science Datathon",
+    issuer: "IBM",
     date: "2023",
     description:
-      "Mastered advanced data structures and algorithms with practical implementation",
-    image: "/certificates/dsa-cert.jpg",
+      "Participated in IBM's Datathon, applying data science techniques to solve real-world problems and analyze complex datasets.",
+    image: IBM,
   },
   {
     id: 3,
+    title: "Java Basic Certification",
+    issuer: "Hacker Rank",
+    date: "2022",
+    description:
+      "Earned Java programming certification demonstrating proficiency in core Java concepts, object-oriented programming, and application development.",
+    image: Java,
+  },
+  {
+    id: 4,
+    title: "Node.js Development",
+    issuer: "Cousera",
+    date: "2025",
+    description:
+      "Completed comprehensive Node.js course covering server-side JavaScript, Express framework, and building RESTful APIs.",
+    image: node,
+  },
+  {
+    id: 5,
     title: "React Advanced Patterns",
-    issuer: "Frontend Masters",
+    issuer: "Cousera",
+    date: "2025",
+    description:
+      "Mastered advanced React concepts including hooks, context API, state management, and performance optimization techniques.",
+    image: react,
+  },
+  {
+    id: 6,
+    title: "AR/VR Development Fundamentals",
+    issuer: "College",
     date: "2023",
     description:
-      "Learned advanced React patterns and best practices for scalable applications",
-    image: "/certificates/react-cert.jpg",
+      "Learned fundamentals of Augmented and Virtual Reality development, including 3D modeling, spatial computing, and immersive experiences.",
+    image: arvr,
   },
-  // Add more achievements as needed
+  {
+    id: 7,
+    title: "AI & Machine Learning Basics",
+    issuer: "Kaggle",
+    date: "2025",
+    description:
+      "Completed introduction to AI and machine learning, covering fundamental algorithms, data preprocessing, and model training techniques.",
+    image: ai,
+  },
 ];
 
 const AchievementCard = ({ achievement }) => {
   return (
     <div className="bg-[#0d081f] rounded-xl overflow-hidden border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 group transform hover:-translate-y-1">
-      <div className="relative h-48 overflow-hidden">
+      <div className="relative bg-white/5 p-4 flex items-center justify-center min-h-[200px]">
         <img
           src={achievement.image}
           alt={achievement.title}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          className="max-w-full max-h-[180px] object-contain group-hover:scale-105 transition-transform duration-300"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0d081f] to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0d081f]/20 to-transparent pointer-events-none" />
       </div>
       <div className="p-6">
         <div className="flex items-center justify-between mb-2">
@@ -58,14 +100,7 @@ const AchievementCard = ({ achievement }) => {
 
 export default function Achievements() {
   return (
-    <div className="min-h-screen bg-[#050414] py-16 px-4 sm:px-6 lg:px-8 relative">
-      {/* Background Blobs */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500 rounded-full opacity-20 blur-3xl animate-blob" />
-        <div className="absolute top-1/2 right-1/4 w-96 h-96 bg-blue-500 rounded-full opacity-20 blur-3xl animate-blob animation-delay-2000" />
-        <div className="absolute bottom-1/4 left-1/2 w-96 h-96 bg-pink-500 rounded-full opacity-20 blur-3xl animate-blob animation-delay-4000" />
-      </div>
-
+    <div className="min-h-screen py-16 px-4 sm:px-6 lg:px-8 relative">
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16 transform transition-all duration-500">
           <h1 className="text-4xl font-bold text-white mb-4">

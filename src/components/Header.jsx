@@ -1,4 +1,4 @@
-import  { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 
 const Navbar = () => {
@@ -29,9 +29,9 @@ const Navbar = () => {
     { label: "Home", link: "/" },
     { label: "About", link: "/aboutme" },
     { label: "Tools and Technologies", link: "tools" },
-    // { label: "Experience", link: "/" },
+    { label: "Experience", link: "/experience" },
     { label: "Projects", link: "/projects" },
-    // { label: "Achievements", link: "/achievements" },
+    { label: "Achievements", link: "/achievements" },
   ];
 
   return (
