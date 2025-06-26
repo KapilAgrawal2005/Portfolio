@@ -1,6 +1,7 @@
 "use client";
 import { FaAward, FaLink } from "react-icons/fa";
 import GDSC from "../assets/images/GDSC.jpg";
+import mysql from "../assets/images/mysql.png";
 import IBM from "../assets/images/IBM.png";
 import Java from "../assets/images/Java.png";
 import node from "../assets/images/node.png";
@@ -10,42 +11,15 @@ import ai from "../assets/images/ai.png";
 const achievements = [
   {
     id: 1,
-    title: "Google Developer Student Club",
-    issuer: "Google",
-    date: "2023",
+    title: "MySql Certificate",
+    issuer: "Scaler",
+    date: "2025",
     description:
-      "Active member of GDSC, participating in workshops and collaborative projects to enhance technical skills and community engagement.",
-    image: GDSC,
+      "In recognition of the completion of the tutorial: SQL for Beginners: Learn SQL using MySQl and Database Design Course.",
+    image: mysql,
   },
   {
     id: 2,
-    title: "IBM Data Science Datathon",
-    issuer: "IBM",
-    date: "2023",
-    description:
-      "Participated in IBM's Datathon, applying data science techniques to solve real-world problems and analyze complex datasets.",
-    image: IBM,
-  },
-  {
-    id: 3,
-    title: "Java Basic Certification",
-    issuer: "Hacker Rank",
-    date: "2022",
-    description:
-      "Earned Java programming certification demonstrating proficiency in core Java concepts, object-oriented programming, and application development.",
-    image: Java,
-  },
-  {
-    id: 4,
-    title: "Node.js Development",
-    issuer: "Cousera",
-    date: "2025",
-    description:
-      "Completed comprehensive Node.js course covering server-side JavaScript, Express framework, and building RESTful APIs.",
-    image: node,
-  },
-  {
-    id: 5,
     title: "React Advanced Patterns",
     issuer: "Cousera",
     date: "2025",
@@ -54,22 +28,59 @@ const achievements = [
     image: react,
   },
   {
+    id: 3,
+    title: "Node.js Development",
+    issuer: "Cousera",
+    date: "2025",
+    description:
+      "Completed comprehensive Node.js course covering server-side JavaScript, Express framework, and building RESTful APIs.",
+    image: node,
+  },
+  {
+    id: 4,
+    title: "Bring AI to Work",
+    issuer: "Google Workspace",
+    date: "2025",
+    description: "Completed the workshop for bringing AI to your daily works.",
+    image: ai,
+  },
+  {
+    id: 5,
+    title: "IBM Data Science Datathon",
+    issuer: "IBM",
+    date: "2024",
+    description:
+      "Participated in IBM's Datathon, applying data science techniques to solve real-world problems and analyze complex datasets.",
+    image: IBM,
+  },
+  {
     id: 6,
+    title: "Google Developer Student Club",
+    issuer: "Google",
+    date: "2023",
+    description:
+      "Active member of GDSC, participating in workshops and collaborative projects to enhance technical skills and community engagement.",
+    image: GDSC,
+  },
+
+  {
+    id: 7,
+    title: "Java Basic Certification",
+    issuer: "Hacker Rank",
+    date: "2023",
+    description:
+      "Earned Java programming certification demonstrating proficiency in core Java concepts, object-oriented programming, and application development.",
+    image: Java,
+  },
+
+  {
+    id: 8,
     title: "AR/VR Development Fundamentals",
     issuer: "College",
     date: "2023",
     description:
       "Learned fundamentals of Augmented and Virtual Reality development, including 3D modeling, spatial computing, and immersive experiences.",
     image: arvr,
-  },
-  {
-    id: 7,
-    title: "AI & Machine Learning Basics",
-    issuer: "Kaggle",
-    date: "2025",
-    description:
-      "Completed introduction to AI and machine learning, covering fundamental algorithms, data preprocessing, and model training techniques.",
-    image: ai,
   },
 ];
 
