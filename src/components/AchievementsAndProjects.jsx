@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import GDSC from "../assets/images/GDSC.jpg";
 import IBM from "../assets/images/IBM.png";
-import Java from "../assets/images/Java.png";
+import yugantar from "../assets/images/yugantar.png";
 import HireWay from "../assets/images/Hireway.png";
 import Portfolio from "../assets/images/Portfolio.png";
-import UAS from "../assets/images/UAS.png";
+import lms from "../assets/images/lms.png";
 const AchievementCard = ({ title, description, imageUrl }) => (
   <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:scale-105 transition-transform duration-300">
     <div className="flex flex-col items-center text-center gap-4">
@@ -61,8 +61,8 @@ const AchievementsAndProjects = () => {
       imageUrl: IBM,
     },
     {
-      title: "Java Basic Certificate ",
-      imageUrl: Java,
+      title: "YUGANTAR Hackathon winning Certificate",
+      imageUrl: yugantar,
     },
     {
       title: "Google Developer Student Club",
@@ -72,6 +72,11 @@ const AchievementsAndProjects = () => {
 
   const projects = [
     {
+      title: "Library Management System",
+      imageUrl: lms,
+      link: "https://github.com/KapilAgrawal2005/Library-Management-System",
+    },
+    {
       title: "HireWay - A Job Portal",
       imageUrl: HireWay,
       link: "https://hireway.vercel.app/",
@@ -80,11 +85,6 @@ const AchievementsAndProjects = () => {
       title: "Personal Portfolio",
       imageUrl: Portfolio,
       link: "https://kapil-agrawal.vercel.app/",
-    },
-    {
-      title: "UAS NMIMS",
-      imageUrl: UAS,
-      link: "https://github.com/KapilAgrawal2005/UAS-NMIMS",
     },
   ];
 
