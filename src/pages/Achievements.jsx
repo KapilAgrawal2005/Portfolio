@@ -8,9 +8,27 @@ import node from "../assets/images/node.png";
 import react from "../assets/images/react.png";
 import arvr from "../assets/images/arvr.png";
 import ai from "../assets/images/ai.png";
+import codersarena from "../assets/images/codersarena.jpg";
+import yugantar from "../assets/images/yugantar.png";
+
 const achievements = [
   {
-    id: 1,
+    title: "YUGANTAR Hackathon winning Certificate",
+    issuer: "NMIMS MPSTME",
+    date: "2025",
+    description:
+      "Won the 24 hour YUGANTAR Hackathon 2025 With the 1st rank and made a job portal according to the problem statement.",
+    image: yugantar,
+  },
+  {
+    title: "Coders Arena - DSA Faceoff Certificate",
+    issuer: "Devantra Community",
+    date: "2025",
+    description:
+      "Participated in national level DSA MCQ face of competition and cleared the round one among 6000+ participations",
+    image: codersarena,
+  },
+  {
     title: "MySql Certificate",
     issuer: "Scaler",
     date: "2025",
@@ -19,7 +37,6 @@ const achievements = [
     image: mysql,
   },
   {
-    id: 2,
     title: "React Advanced Patterns",
     issuer: "Cousera",
     date: "2025",
@@ -28,7 +45,6 @@ const achievements = [
     image: react,
   },
   {
-    id: 3,
     title: "Node.js Development",
     issuer: "Cousera",
     date: "2025",
@@ -37,7 +53,6 @@ const achievements = [
     image: node,
   },
   {
-    id: 4,
     title: "Bring AI to Work",
     issuer: "Google Workspace",
     date: "2025",
@@ -45,7 +60,6 @@ const achievements = [
     image: ai,
   },
   {
-    id: 5,
     title: "IBM Data Science Datathon",
     issuer: "IBM",
     date: "2024",
@@ -54,7 +68,6 @@ const achievements = [
     image: IBM,
   },
   {
-    id: 6,
     title: "Google Developer Student Club",
     issuer: "Google",
     date: "2023",
@@ -64,7 +77,6 @@ const achievements = [
   },
 
   {
-    id: 7,
     title: "Java Basic Certification",
     issuer: "Hacker Rank",
     date: "2023",
@@ -74,7 +86,6 @@ const achievements = [
   },
 
   {
-    id: 8,
     title: "AR/VR Development Fundamentals",
     issuer: "College",
     date: "2023",
@@ -125,8 +136,8 @@ export default function Achievements() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {achievements.map((achievement) => (
-            <AchievementCard key={achievement.id} achievement={achievement} />
+          {achievements.map((achievement, index) => (
+            <AchievementCard key={index} achievement={achievement} />
           ))}
         </div>
       </div>
