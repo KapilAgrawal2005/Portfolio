@@ -50,7 +50,7 @@ const About = () => {
           {/* Resume Button */}
           <div className="mx-auto md:flex gap-5">
             <a
-              href="https://drive.google.com/file/d/1-b77Mezh8eatxZirMjKjVQjjcCwWuJ7S/view?usp=sharing"
+              href="https://drive.google.com/file/d/1Sh5SulZl2_n866JaiRGFl-oIEW-xYhVP/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block text-white py-3 px-8 rounded-full mt-5 text-lg font-bold transition duration-300 transform hover:scale-105"
