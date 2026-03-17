@@ -6,16 +6,42 @@ import {
   FaExternalLinkAlt,
 } from "react-icons/fa";
 import dehix from "../assets/images/dehix.png";
+import logo from "../assets/images/logo.webp";
 import { MdWork, MdSchool } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 
 const experiences = [
   {
     id: 1,
+    title: "IT Intern",
+    company: "Unity Small Finance Bank Limited",
+    location: "Onsite",
+    duration: "Jan 2026 - Current",
+    type: "internship",
+    description:
+      "Handling team coordination along with working on frontend side of projects.",
+    technologies: [
+      "Node.js",
+      "MongoDB",
+      "Express.js",
+      "Git",
+      "Nextjs",
+      "React.js",
+    ],
+    achievements: [
+      "Managing multipul projects at the same time with accuracy lead to increase multitasking.",
+      "Understood the company environment and team bonding.",
+      "Collaborated with a large team leading to increase in the teamwork skill.",
+    ],
+    companyLogo: logo,
+    companyWebsite: "https://unity.bank.in/",
+  },
+  {
+    id: 2,
     title: "Full Stack Developer Intern",
     company: "Dehix",
     location: "Remote",
-    duration: "May 2025 - Current",
+    duration: "May 2025 - Nov 2025",
     type: "internship",
     description:
       "Developed and maintained web applications using Next.js and Node.js. Collaborated with senior developers to implement new features and optimize existing codebase.",
